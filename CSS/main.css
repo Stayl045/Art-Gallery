@@ -3,7 +3,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0 4rem 0;
+  margin: 2rem;
   width: 100%;
   text-align: center;
 }
@@ -21,7 +21,7 @@ figcaption {
 
 img {
   max-width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 /************************/
@@ -70,18 +70,13 @@ figcaption {
   grid-gap: 1.5rem;
   margin: 20px;
   object-fit: cover;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 }
 
 figure {
   display: grid;
-  height: 100%;
+  height: auto;
 }
-/* 
-.img-tall {
-  grid-row: span 2;
-  height: 100%;
-} */
 
 .img-wide {
   display: grid;
