@@ -1,12 +1,124 @@
-figure {
+header {
   display: flex;
-  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-row: 2;
+  grid-column: 1;
 }
 
-.grid-container {
+.image {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-row: 2;
+  grid-column: 1;
+}
+figcaption {
+  grid-row: 1;
+  grid-column: 1;
+
+  justify-self: end;
+  align-self: end;
+
+  text-align: end;
+}
+
+/************************/
+/**** navigation bar ****/
+/************************/
+.nav-container {
+  display: flex;
+  place-items: center;
+  justify-content: space-evenly;
+}
+
+/************************/
+/***** Gallery Grid *****/
+/************************/
+.gallery {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+figure {
+  display: grid;
+  height: 100%;
+}
+
+.img-tall {
+  grid-row: span 2;
+  height: 100%;
+}
+
+.img-wide {
+  height: 100%;
+  grid-column: 1 / 2;
+}
+
+.item {
+  height: 100%;
+  display: grid;
+  grid-column: span 3;
+  object-fit: contain;
+}
+
+.item-1 {
+  height: 100%;
+  display: grid;
+  grid-column: span 3;
+  object-fit: contain;
+}
+
+.item-2 {
+  height: 100%;
+  display: grid;
+  grid-column: span 3;
+  object-fit: contain;
+}
+
+.item-3 {
+  height: 100%;
+  display: grid;
+  grid-column: span 3;
+  object-fit: contain;
+}
+
+.item-4 {
+  height: 100%;
+  display: grid;
+  grid-column: span 3;
+  object-fit: contain;
+}
+
+.item-5 {
+  height: 100%;
+  display: grid;
+  grid-column: span 3;
+  object-fit: contain;
+}
+
+.item-6 {
+  height: 100%;
+  display: grid;
+  grid-column: 3 / -1;
+}
+
+.item-7 {
+  height: 100%;
+  display: grid;
+  grid-column: span 3;
+  object-fit: contain;
+}
+
+.item-8 {
+  height: 100%;
+  display: grid;
+  grid-column: span 3;
+  object-fit: contain;
 }
