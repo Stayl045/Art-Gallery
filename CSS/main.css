@@ -1,13 +1,12 @@
 header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 2rem;
-  padding: 15px;
-  text-align: center;
+  padding: 10px;
   color: #9276a6;
-  font-size: 30px;
+  font-size: 20px;
+  font-family: "Alfa Slab One", cursive;
+
+  font-family: "Rowdies", cursive;
 }
 
 footer {
@@ -18,20 +17,24 @@ footer {
   font-size: 20px;
   padding: 25px;
 }
-/* img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
-  grid-row: 2;
-  grid-column: 1;
-} */
 
-.img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
-  grid-row: 2;
+header h1 {
+  letter-spacing: 0.5rem;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+figcaption {
+  grid-row: 1;
   grid-column: 1;
+  color: #85b4ae;
+  justify-self: end;
+  align-self: end;
+  text-align: end;
+  font-size: 20px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  margin: 0 8px 4px 0;
 }
 
 /************************/
@@ -39,16 +42,18 @@ footer {
 /************************/
 .nav-container {
   display: flex;
-  place-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 nav {
   background-color: #9276a6;
-  color: white;
-  width: 40%;
-  padding: 35px;
+  border: 1px black solid;
+  opacity: 0.7;
+  width: 50%;
+  padding: 20px;
   border-radius: 7px;
+  margin-right: 20px;
 }
 
 nav ul {
@@ -60,34 +65,9 @@ nav ul {
 
 li a {
   color: #85b4ae;
-}
-
-figcaption {
-  grid-row: 1;
-  grid-column: 1;
-  color: #85b4ae;
-  justify-self: end;
-  align-self: end;
-
-  text-align: end;
+  letter-spacing: 2px;
   font-size: 24px;
-  font-weight: 800;
-  margin: 0 8px 4px 0;
 }
-
-.align-header {
-  display: grid;
-  justify-content: start;
-  align-items: start;
-}
-
-/* changed a bit of the nav bar */
-
-/* .nav-container {
-  display: flex;
-  place-items: center;
-  justify-content: space-evenly;
-} */
 
 /************************/
 /***** Gallery Grid *****/
@@ -99,44 +79,63 @@ figcaption {
 }
 
 .img-tall {
-  grid-row: span 2;
+  grid-row: span 1;
   height: 100%;
 }
 
 .img-wide {
   width: 100%;
-  grid-column: 1 / -1;
+  grid-column: 1 / -2;
 }
 
 .item {
   object-fit: cover;
   width: 100%;
   height: 600px;
-  object-position: left;
 }
 
-/**
-
-figcaption {
-  color: white;
-  grid-row: 1;
-  grid-column: 1;
-
-  justify-self: end;
-  align-self: end;
-
-  text-align: center;
+/**** Icons ****/
+.fa-home {
+  display: grid;
+  align-content: center;
+  color: black;
+  padding-right: 10px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+/*** Hover Effects ***/
+.img-tall:hover {
+  transform: scale(1.05);
 }
-/************************/
-/**** navigation bar ****/
-/************************/
 
-/************************/
-/***** Gallery Grid *****/
-/************************/
+.img-wide:hover {
+  transform: scale(1.05);
+}
+
+/*** Key Frame ***/
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+li a:hover {
+  color: black;
+}
