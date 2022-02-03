@@ -8,6 +8,8 @@
 
 ## Reflection
 
+- I designed a layout on figma that I thought was nice and all...until I actually got started
+  - ![wire-frame](https://github.com/Stayl045/cpnt260-a3/blob/6b50f756b7f3bfb7706d5df378b399f6ffd6f639/figma-gallery-wireframe.png)
 - I found that I was constantly bashing my head against the wall with this assignment.
   - I thought I created a layout that I was particularily proud of...however, once I tried to shrink my page, my images weren't responsive at all. No matter that I tried, this would not fix this issue.
   - I figured out how to place images the way I wanted if I put a class on the `img` tag itself. Which I think was causing the problem.
